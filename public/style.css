@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #f3f4f6;
+	color: #030712;
+	font: normal normal 300 16px/1.5 'Inter', sans-serif;
+}
+
+body {
+	font: inherit;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.header__container {
+	padding: 4rem 1.5rem;
+	text-align: center;
+}
+
+.header__logo {
+	height: 150px;
+	width: 150px;
+	object-fit: cover;
+	border-radius: 100%;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.main__container {
+	width: 100%;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.card {
+	background: #fff;
+	border: solid 1px #e5e7eb;
+	border-radius: 0.5rem;
+}
+
+.card__header {
+	padding: 1.25rem;
+}
+
+.card__title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.card__content {
+	padding: 1.25rem;
+	padding-top: 0;
+}
+
+.products {
+	overflow-y: auto;
+	height: 400px;
+	padding-right: 0.5rem;
+	margin-right: -0.5rem;
+}
+
+.products__container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.products__item {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	gap: 1rem;
+	padding: 1rem;
+	border: solid 1px #f3f4f6;
+	border-radius: 0.5rem;
+	transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.products__item:hover {
+	background-color: #f9fafb;
+	border-color: #e5e7eb;
+}
+
+.products__item__image {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 0.5rem;
+	border: solid 1px #f3f4f6;
+}
+
+.products__item__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 60px;
+}
+
+.products__item__title {
+	color: #030712;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.products__item__description {
+	color: #111827;
+	font-size: 0.8rem;
+	font-weight: 300;
+}
+
+.products__item__price {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #111827;
+	padding: 0.25rem 0.6rem;
+	border-radius: 0 0.5rem 0 0.5rem;
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+.loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	border: solid 1px #f3f4f6;
+	border-radius: 0.5rem;
+}
+
+.loading__icon {
+	width: 20px;
+	height: 20px;
+	border: solid 2px #111827;
+	border-bottom-color: transparent;
+	border-radius: 100%;
+	animation: spin 2s linear both infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
